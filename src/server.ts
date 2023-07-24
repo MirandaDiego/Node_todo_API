@@ -11,9 +11,9 @@ const server = express();
 server.use(cors());
 
 server.use(express.static(path.join(__dirname, '../public')));
+
 server.use(express.urlencoded({ extended: true }));
 
-server.get('/ping', (req: Request, res: Response) => res.json({ pong: true }));
 
 server.use(apiRoutes);
 
@@ -23,7 +23,7 @@ server.use((req: Request, res: Response) => {
 });
 
 const errorHandler: ErrorRequestHandler = (err, req, res, next) => {
-    res.status(400); // Bad Request
+    res.status(400); 
     console.log(err);
     res.json({ error: 'Ocorreu algum erro.' });
 }
