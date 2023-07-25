@@ -11,7 +11,7 @@ export const registerUser = async(req:Request, res:Response)=>{
     if(req.body.nome){
         let newUser = await User.create({
             nome: req.body.nome,
-            idade: req.body.idade
+            idade: req.body.idade 
         })
         newUser.save()
         

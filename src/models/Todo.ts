@@ -21,7 +21,7 @@ export const Todo = sequelize.define<TodoInstance>('Todo', {
     id:{
         primaryKey: true,
         autoIncrement: true,
-        type: DataTypes.INTEGER
+        type: DataTypes.INTEGER 
 
     },
     descricao: {
